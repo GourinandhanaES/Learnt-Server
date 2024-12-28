@@ -4,6 +4,7 @@ const sendMail = async (email, subject, data) => {
   const transport = createTransport({
     host: "smtp.gmail.com",
     port: 465,
+    secure: true,
     auth: {
       user: process.env.Gmail,
       pass: process.env.Password,
@@ -71,6 +72,7 @@ export const sendForgotMail = async (subject, data) => {
   const transport = createTransport({
     host: "smtp.gmail.com",
     port: 465,
+    secure: true,
     auth: {
       user: process.env.Gmail,
       pass: process.env.Password,
